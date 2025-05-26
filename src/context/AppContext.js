@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const AppContext = createContext();
 
@@ -13,5 +13,11 @@ export const AppProvider = ({ children }) => {
     ],
   });
 
-  useEffect(() => {
-    con...
+  return (
+    <AppContext.Provider value={{ clients, setClients, readings, setReadings, config, setConfig }}>
+      {children}
+    </AppContext.Provider>
+  );
+};
+
+export const useAppContext = () => useContext(AppContext);
