@@ -1,16 +1,17 @@
 import React from 'react';
-import { AppProvider } from './context/AppContext';
-import ClientForm from './components/Clients/ClientForm';
+import Sidebar from './components/Layout/Sidebar';
+import Topbar from './components/Layout/Topbar';
 
-function App() {
+export default function App() {
   return (
-    <AppProvider>
-      <div className='min-h-screen bg-gray-50 p-4'>
-        <h1 className='text-2xl font-bold text-center text-blue-700'>Sistema de Gestão de Água</h1>
-        <ClientForm />
+    <div className='flex h-screen bg-gray-100'>
+      <Sidebar />
+      <div className='flex flex-col flex-1'>
+        <Topbar />
+        <main className='flex-1 p-6'>
+          <h1 className='text-2xl font-bold text-blue-800'>Dashboard do Sistema de Água</h1>
+        </main>
       </div>
-    </AppProvider>
+    </div>
   );
 }
-
-export default App;
