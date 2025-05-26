@@ -1,3 +1,3 @@
 # Sistema de Gestão de Água
 
-Sistema em React com TailwindCSS para controle de consumo de água.
+Sistema com layout moderno e estrutura pronta para produção.
